@@ -25,18 +25,25 @@ const Header = () => {
             </ul>
         </div>
     </div>
+};
+
+const pizzaHut = {
+    text : "pizza hut",
+    image : "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/5b9c53df-e0cb-48fc-ac31-f02735592edc_10575.jpg",
+    cusines : ["pizza", "Indian"],
+    rating : "4.2"
 }
 
 const ReasturantCards = () => {
     return(
         <div className="card">
-            <img src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/16/5b9c53df-e0cb-48fc-ac31-f02735592edc_10575.jpg' />
-            <h1>pizza hut</h1>
-            <h3>pizza, Indians</h3>
-            <h4>4.3 stars</h4>
+            <img src= {pizzaHut.image}/>
+            <h1>{pizzaHut.text}</h1>
+            <h3>{pizzaHut.cusines}</h3>
+            <h4>{pizzaHut.rating} stars</h4>
         </div>
-    )
-}
+    );
+};
 const Body = () =>{
     return 
     <div>
