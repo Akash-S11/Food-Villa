@@ -40,7 +40,7 @@ const ReasturantCards = () => {
             <img src= {pizzaHut.image}/>
             <h1>{pizzaHut.text}</h1>
             <h3>{pizzaHut.cusines}</h3>
-            <h4>{pizzaHut.rating} stars</h4>
+            <h4>{pizzaHut.rating} stars </h4>
         </div>
     );
 };
