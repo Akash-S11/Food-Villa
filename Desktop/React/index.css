@@ -1,4 +1,5 @@
 /* Header component starts */
+
 .header{
     display:flex;
     justify-content: space-between;
@@ -6,6 +7,16 @@
     padding:5px;
     margin:5px;
 }
+.card{
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card > img {
+    width:100%;
+    
+} 
 
 .logo{
     width:100px;
