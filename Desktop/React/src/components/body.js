@@ -29,13 +29,9 @@ const Body = () => {
 
       console.log("render");
 
-    //not rendered component
-    if(!allRestaurants) return null; //early return
 
-    if (filteredrestaurants?.length === 0 )
-      return <h1> No Restraunt match your Filter!!</h1>
-
-    return (filteredrestaurants?.length === 0 ) ? (<Shimmer/>
+    return (filteredrestaurants?.length === 0 ) ? (
+    <Shimmer/>
     ) : (
     <>
     <div className ="search-container">
