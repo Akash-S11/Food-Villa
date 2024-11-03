@@ -18,6 +18,13 @@
     
 } 
 
+.rcards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+
 .logo{
     width:100px;
     height:100px;

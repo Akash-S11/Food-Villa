@@ -1,31 +1,8 @@
-import React from 'react';
-import ReactDOM, { createRoot } from 'react-dom/client';
-import Header from './src/components/header';
-import Body from "./src/components/body";
-import RestaurantsCards from './src/components/restaurantsCards';
-import {IMG_CDN_URL} from "./src/components/constants";
-// import Footer from "./src/components/footer";
+import RestaurantsCards from "./restaurantsCards";
 
-const Title = () => (
-    <h1 id = "title" key = "h2">
-    Food Villa </h1>
-);
-
-const Header = () => {
-    return <div className="header">
-        <Title />
-        <div className="nav-items">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    </div>
-};
-
-const reasturantLists = {
+export const LOGO_URL = "https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj";
+export const IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+export const reasturantLists = {
     "restaurants": [
                   {
                     "info": {
@@ -816,24 +793,3 @@ const reasturantLists = {
                   
                 ]
             }
-
-
-const Footer = () =>{
-    return <h4>footer</h4>
-}
-const AppLayout = () => {
-    return (
-        <>
-        <Header/>
-        <Body/>
-        <RestaurantsCards />
-        <Footer />
-        
-        </>
-    );
-};
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
