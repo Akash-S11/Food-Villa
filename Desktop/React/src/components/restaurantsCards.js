@@ -1,19 +1,50 @@
-import { IMG_CDN_URL } from './constants'; 
+import { CDN_URL } from "./constants";
+
+const RestaurantCard = ({
+  name,
+  cuisines,
+  cloudinaryImageId,
+  lastMileTravelString,
+}) => {
+  return (
+    <div className="res-card">
+      <img src={CDN_URL + cloudinaryImageId} />
+      <h2>{name}</h2>
+      <h3>{cuisines.join(", ")}</h3>
+      <h4>{lastMileTravelString} minutes</h4>
+    </div>
+  )
+}
+// const RestaurantCard = (props) => {
+//   const { resData } = props;
+
+//   const {
+//     cloudinaryImageId,
+//     name,
+//     avgRating,
+//     cuisines,
+//     costForTwo,
+//     deliveryTime,
+//   } = resData;
+
+//   return (
+//     <div
+//       data-testid="resCard"
+//       className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200"
+//     >
+//       <img
+//         className="rounded-lg"
+//         alt="res-logo"
+//         src={CDN_URL + cloudinaryImageId}
+//       />
+//       <h3 className="font-bold py-4 text-lg">{name}</h3>
+//       <h4>{cuisines}</h4>
+//       <h4>{avgRating} stars</h4>
+//       <h4>₹{costForTwo / 100} FOR TWO</h4>
+//       <h4>{deliveryTime} minutes</h4>
+//     </div>
+//   );
+// };
 
 
-const RestaurantsCards = (props) => {
-    console.log(props);
-    //const imageBaseUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-    return(
-        <div className="card">
-            <img 
-            src= {IMG_CDN_URL + props.info?.cloudinaryImageId }/>
-            <h2>{props.info?.name}</h2>
-            <h4>{props.info?.cuisines.join(", ")}</h4>
-            <h4>{props.info?.sla.lastMileTravelString} minutes</h4>
-
-        </div>
-    );
-};
-
-export default RestaurantsCards;
+export default RestaurantCard;
