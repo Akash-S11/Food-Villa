@@ -485,32 +485,15 @@ const ReasturantCards = (props) => {
         </div>
     );
 };
-const Body = () =>{
+
+const Body = () => {
     return (
-    <div className='rcards'>
-        <ReasturantCards info = {reasturantLists.restaurants[0].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[1].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[2].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[3].info}/>
-        {/* <ReasturantCards info = {reasturantLists.restaurants[4].info}/> */}
-        {/* <ReasturantCards info = {reasturantLists.restaurants[5].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[6].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[7].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[8].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[9].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[10].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[11].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[12].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[13].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[14].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[15].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[16].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[17].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[18].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[19].info}/>
-        <ReasturantCards info = {reasturantLists.restaurants[20].info}/> */}
-    </div>
-);      
+        <div className='rcards'>
+            {reasturantLists.restaurants.map((restaurant, index) => (
+                <ReasturantCards key={index} info={restaurant.info} />
+            ))}
+        </div>
+    );
 };
 
 const Footer = () =>{
