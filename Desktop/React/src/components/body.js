@@ -29,8 +29,7 @@ const Body = () => {
 
       console.log("render");
 
-
-    return (filteredrestaurants?.length === 0 ) ? (
+    return allRestaurants?.length === 0 ? (
     <Shimmer/>
     ) : (
     <>
