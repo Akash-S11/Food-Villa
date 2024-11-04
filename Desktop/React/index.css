@@ -9,6 +9,11 @@ img {
     border: 1px solid black;
 }
 
+.foot {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
 .logo {
     width: 100px;
 }
@@ -21,6 +26,7 @@ img {
 }
 
 .nav-items {
+    display: flex;
     padding:  0px 20px;
 }
 
