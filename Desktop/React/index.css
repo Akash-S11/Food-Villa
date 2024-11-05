@@ -4,6 +4,10 @@
     border: 1px solid black;
 }
 
+.img-menu{
+    width: 10%;
+}
+
 img {
     width: 100px; 
     border: 1px solid black;
