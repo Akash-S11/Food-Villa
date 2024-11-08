@@ -5,10 +5,11 @@ import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 
 function filterData(searchText, restaurants){
-  const filterdata = restaurants.filter((restaurant) =>
-  restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
+  const filterdata = restaurants.filter((restaurants) =>
+    restaurants.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
 );
-  return filterData;
+  console.log("data : " + filterdata);
+  return filterdata;
 }
 
 const Body = () => {

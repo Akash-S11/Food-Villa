@@ -11,7 +11,7 @@ import styles from "../../login.module.css";
 const UserLogin =  () => {
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
-    let userArr = ["Akash", "1234"];
+    let userArr = [];
     const uName = (e) =>{
         setUserName(e.target.value);
         console.log(e);
@@ -22,7 +22,7 @@ const UserLogin =  () => {
         console.log(e);
     }
 
-    const sumbit = () =>{
+    const submit = () =>{
         let userInput = { username : userName, Password : password };
         let userArr = [userName, password];
         console.log("accesing user array - username : " + userArr[0])
@@ -57,7 +57,7 @@ const UserLogin =  () => {
                 onChange={uPassword} />
             </div>
             <div>
-                <button onClick={sumbit} className = {styles.searchinput}> Submit </button>
+                <button onClick={submit} className = {styles.searchinput}> Submit </button>
                 <button onClick={reset} > Reset </button>
             </div>           
         </div>
