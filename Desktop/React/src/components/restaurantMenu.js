@@ -44,7 +44,7 @@ useEffect(() => {
                     Object.values(restaurant.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards).map((item)=> <li key = {item.id}>{item.card.info.name}</li>)
                     }
                 </ul>
-            </div>nn
+            </div>
         </div>
     </div>
     );

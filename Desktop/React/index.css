@@ -4,6 +4,11 @@
     border: 1px solid black;
 }
 
+.reset-btn{
+    width: 50px;
+    height : 20px;
+}
+
 .login-button{
     background-color: #0866ff;
     color: white;

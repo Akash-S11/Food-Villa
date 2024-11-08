@@ -21,8 +21,10 @@ const Header = () => {
               <li>Cart</li>
             </ul>
         </div>
+        <Link to = "/login">
         {isLoggedIn ? <button onClick={()=> setIsLoggedIn(false)}> logout </button> :
          <button onClick={()=> setIsLoggedIn(true)}> login </button>}
+         </Link>
     </div>
 }
 

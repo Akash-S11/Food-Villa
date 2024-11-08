@@ -21,6 +21,11 @@ const Body = () => {
     getRestaurants();
   }, []);
 
+  const reset_btn = () =>{
+    setSearchText("");
+    getRestaurants();
+  }
+
   async function getRestaurants(){
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
@@ -49,6 +54,9 @@ const Body = () => {
     >
       Search
     </button>
+    <button className="reset-btn"
+      onClick={reset_btn}> Reset
+      </button>
     </div>
     <div className = "restaurant-list">
       {filteredrestaurants.map((restaurant) => {

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styles from "../../login.module.css";
 
 
-// login page
+//login page
 //username
 //password
 //sumbit button - it should return json object of username and password
