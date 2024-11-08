@@ -4,6 +4,9 @@ export const CDN_URL =
 export const LOGO_URL =
   "https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj";
 
+export const MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId="
+
 export const resturantLists = {
     "restaurants": [
                   {

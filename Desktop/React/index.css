@@ -4,8 +4,26 @@
     border: 1px solid black;
 }
 
+.login-button{
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100px;
+}
+
+.search-input{
+    background-color: red;
+}
+.Menu{
+    display: flex;
+    border: 1px solid black;
+}
 .img-menu{
-    width: 10%;
+    width: 30%;
 }
 
 img {
