@@ -7,9 +7,9 @@ const RestaurantCard = ({
   costForTwo,
 }) => {
   return (
-    <div className="res-card">
+    <div className="w-52 p-2 m-2 bg-gray-300 shadow-2xl">
       <img src={CDN_URL + cloudinaryImageId} />
-      <h2>{name}</h2>
+      <h2 className="font-bold">{name}</h2>
       <h3>{cuisines.join(", ")}</h3>
       <h4>{costForTwo} </h4>
     </div>

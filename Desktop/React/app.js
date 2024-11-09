@@ -10,6 +10,7 @@ import Error from "./src/components/error";
 import RestaurantMenu from "./src/components/restaurantMenu";
 import UserInput from "./src/components/profile";
 import UserLogin from "./src/components/login.js"
+import Instamart from "./src/components/instamart.js";
 //import UserInput from "./src/components/profileCLass";
 
 const AppLayout = () => {
@@ -52,6 +53,10 @@ const AppRouter = createBrowserRouter ([
       path : "/login",
       element : <UserLogin />
     },
+    {
+      path : "/instamart",
+      element : <Instamart />
+    }
     ],
   },
 ]);

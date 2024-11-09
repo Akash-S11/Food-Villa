@@ -3,6 +3,7 @@ import RestaurantCard from "./restaurantsCards";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
+import useOnline from "../../utils/useOnline";
 
 function filterData(searchText, restaurants){
   const filterdata = restaurants.filter((restaurants) =>
@@ -16,6 +17,9 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] =useState([]);
   const [filteredrestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  if(useOnline === false)
+    return <h1>Looks your offline. Check your internet connection.</h1>
 
   useEffect(() => { //API Call
     getRestaurants();
@@ -40,13 +44,13 @@ const Body = () => {
     <Shimmer/>
     ) : (
     <>
-    <div className ="search-container">
+    <div className ="p-3 m-3 shadow-xl bg-blue-200 ">
       <input type ="text" className="search-input" placeholder="Search" value = {searchText}
       onChange={(e) => {
         setSearchText(e.target.value);
       }}
     />
-    <button className = "search-btn"
+    <button className = "p-1 m-1 bg-purple-600 rounded-md text-white"
     onClick={() =>{
       const data = filterData(searchText, allRestaurants);
       setFilteredRestaurants(data);
@@ -54,11 +58,11 @@ const Body = () => {
     >
       Search
     </button>
-    <button className="reset-btn"
+    <button className="p-1 m-1 bg-purple-600 rounded-md text-white"
       onClick={reset_btn}> Reset
       </button>
     </div>
-    <div className = "restaurant-list">
+    <div className = "flex flex-wrap">
       {filteredrestaurants.map((restaurant) => {
         return (
           <Link to= {"/restaurant/" + restaurant?.info?.id}
