@@ -64,6 +64,7 @@ const Body = () => {
     </div>
     <div className = "flex flex-wrap">
       {filteredrestaurants.map((restaurant) => {
+        console.log(restaurant?.info?.id); 
         return (
           <Link to= {"/restaurant/" + restaurant?.info?.id}
           key={restaurant?.info?.id}>

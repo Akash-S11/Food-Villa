@@ -8,8 +8,8 @@ import useRestaurant from "../../utils/useRestaurant";
 const RestaurantMenu = () => {
     const {rest} = useParams();
     console.log(rest);
-
-    const restaurant = useRestaurant(resId);
+    
+    const restaurant = useRestaurant(rest);
     console.log(restaurant);
 
     return (!restaurant) ? <Shimmer /> :(
@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
         <div>
         <h1>Restaurant id : {rest} </h1>
         <h2>{restaurant.cards?.[2]?.card?.card?.info?.name}</h2>
-        <img className = "img-menu" src={CDN_URL + restaurant.cards?.[2]?.card?.card?.info?.cloudinaryImageId}  />
+        <img className = "h-64 size-64" src={CDN_URL + restaurant.cards?.[2]?.card?.card?.info?.cloudinaryImageId}  />
         <h2>{restaurant.cards?.[2]?.card?.card?.info?.city}</h2>
         <h2>{restaurant.cards?.[2]?.card?.card?.info?.areaName}</h2>
         <h2>{restaurant.cards?.[2]?.card?.card?.info?.locality}</h2>
